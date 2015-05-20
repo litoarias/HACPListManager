@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "PlistManager.h"
+
+#define kFileName @"users.plist"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [PlistManager createFullFilePath:@"data.plist"];
+    
+    
     return YES;
 }
 

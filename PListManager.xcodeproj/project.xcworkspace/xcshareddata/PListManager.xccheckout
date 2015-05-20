@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2EAE3F2D-08DD-4157-8A9D-2C393BEA0C10</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PListManager</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6A86EA09E47A4F0DBB2AFFA34FB8E95B154F8676</key>
+		<string>https://github.com/litoarias/HACPListManager.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PListManager.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6A86EA09E47A4F0DBB2AFFA34FB8E95B154F8676</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/litoarias/HACPListManager.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6A86EA09E47A4F0DBB2AFFA34FB8E95B154F8676</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6A86EA09E47A4F0DBB2AFFA34FB8E95B154F8676</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PlistManager</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -36,8 +36,10 @@
     
     // si existe se sale
     if(success) {
-        ////NSLog(@"ya existe el archivo (vacio)");
+        NSLog(@"ya existe el archivo (vacio)");
         return YES;
+    }else{
+        NSLog(@"No existe");
     }
     
     // la BBDD no existe, asi que la copiamos en el directorio documents (creamos la ruta)
@@ -60,6 +62,23 @@
 
 + (void) insertObjectWithData:(NSDictionary *)data fileName:(NSString *) fileName {
     
+    if(data[kImage]){
+        // Get name unique for image
+        NSString *imageName = [PlistManager createImageName];
+        // Create mutable dictionary for add keys
+        NSMutableDictionary *newData = [data mutableCopy];
+        // Add new key
+        [newData setObject:imageName forKey:kNameImage];
+        // Save image in file directory
+        [PlistManager saveImage:[data valueForKey:kImage] name:imageName];
+        // Clean old object
+        data = nil;
+        // Delete key of UIImage
+        [newData removeObjectForKey:kImage];
+        // Assign new data
+        data = newData;
+    }
+    
     NSString *writableDBPath = [self getWritablePathForManageWithNameFile:fileName];
     
     NSMutableArray *misDatos = [[NSMutableArray alloc]initWithContentsOfFile:writableDBPath];
@@ -73,13 +92,16 @@
             if(![misDatos containsObject:data]){
                 [misDatos addObject:data];
             }
+            
         }
     }
-    
-    
     [misDatos writeToFile:writableDBPath atomically:YES];
+ 
+    [PlistManager logWithFileName:fileName];
     
 }
+
+
 
 + (void) deleteObjectWithData:(NSDictionary *)data fileName:(NSString *) fileName {
     
@@ -88,7 +110,11 @@
     NSMutableArray *misDatos = [[NSMutableArray alloc]initWithContentsOfFile:writableDBPath];
     
     for (int i = 0; i< [misDatos count]; i++) {
+        
         if([[misDatos objectAtIndex:i] isEqualToDictionary:data]){
+            if (data[kNameImage]) {
+                [PlistManager removeImage:[data valueForKey:kNameImage]];
+            }
             [misDatos removeObjectAtIndex:i];
         }
     }
@@ -102,6 +128,15 @@
     NSString *writableDBPath = [self getWritablePathForManageWithNameFile:fileName];
     
     NSMutableArray *misDatos = [[NSMutableArray alloc]initWithContentsOfFile:writableDBPath];
+    
+    // Loop with all objects
+    for (int i = 0; i< [misDatos count]; i++) {
+        // It has image
+        if ([misDatos objectAtIndex:i][kNameImage]) {
+            // Delete image
+            [PlistManager removeImage:[[misDatos objectAtIndex:i]valueForKey:kNameImage]];
+        }
+    }
     
     [misDatos removeAllObjects];
     
@@ -141,7 +176,7 @@
 }
 
 +(NSArray *) searchObjectsWith:(NSString *)stringSearch keyDictionary:(NSString *)keyDictionary fileName:(NSString *) fileName{
-   
+    
     NSArray *filteredArray = [[PlistManager getAllObjectsWithFileName:fileName] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"%K CONTAINS[cd] %@", keyDictionary, stringSearch]];
     
     if(filteredArray.count > 0){
@@ -165,8 +200,6 @@
 {
     if (image != nil)
     {
-//        UIImage *smallImage = [self imageWithImage:image scaledToSize:CGSizeMake(50,50)];
-        
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,  NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString* path = [documentsDirectory stringByAppendingPathComponent:imageName];
@@ -193,8 +226,9 @@
     NSError *error;
     BOOL success = [fileManager removeItemAtPath:filePath error:&error];
     if (success) {
-        UIAlertView *removeSuccessFulAlert=[[UIAlertView alloc]initWithTitle:@"Congratulation:" message:@"Successfully removed" delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
-        [removeSuccessFulAlert show];
+        //        UIAlertView *removeSuccessFulAlert=[[UIAlertView alloc]initWithTitle:@"Congratulation:" message:@"Successfully removed" delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
+        //        [removeSuccessFulAlert show];
+        NSLog(@"Delete image");
     }
     else
     {
@@ -234,6 +268,10 @@
     
     return [documentsDirectory stringByAppendingPathComponent:fileName];
     
+}
+
++ (NSString *) createImageName{
+    return [NSString stringWithFormat:@"%d.png",(int)[[NSDate date] timeIntervalSince1970]];
 }
 
 @end

@@ -9,19 +9,31 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#define kImage @"keyForImageObject"
+#define kNameImage @"keyForNameImageObject"
+
 @interface PlistManager : NSObject
 
 + (BOOL) createFullFilePath:(NSString *)fileName;
+
 + (void) insertObjectWithData:(NSDictionary *)data fileName:(NSString *) fileName;
+
 + (void) deleteObjectWithData:(NSDictionary *)data fileName:(NSString *) fileName;
+
 + (void) deleteAllObjectsWithFileName:(NSString *) fileName;
+
 + (NSDictionary *) getLastObjectWithFileName:(NSString *) fileName;
+
 + (NSArray *) getAllObjectsWithFileName:(NSString *) fileName;
+
 + (BOOL) containsObject:(NSDictionary *)data fileName:(NSString *) fileName;
+
 + (NSArray *) searchObjectsWith:(NSString *)stringSearch keyDictionary:(NSString *)keyDictionary fileName:(NSString *) fileName;
+
 + (void) logWithFileName:(NSString *)fileName;
 
 + (void)saveImage:(UIImage*)image name:(NSString *)imageName;
+
 + (UIImage*)loadImageWithName:(NSString *)imageName;
 
 @end
