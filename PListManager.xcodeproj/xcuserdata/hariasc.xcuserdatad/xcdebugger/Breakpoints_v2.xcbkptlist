@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PListManager/PlistManager.m"
-            timestampString = "453825966.031343"
+            timestampString = "453827012.53186"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
             landmarkName = "+loadImageWithName:"
             landmarkType = "5">
          </BreakpointContent>

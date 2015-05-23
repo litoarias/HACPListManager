@@ -204,7 +204,14 @@
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString* path = [documentsDirectory stringByAppendingPathComponent:imageName];
         NSData* data = UIImagePNGRepresentation(image);
-        [data writeToFile:path atomically:YES];
+        BOOL success = [data writeToFile:path atomically:YES];
+        if (success) {
+            NSLog(@"SAved image");
+        }
+        else
+        {
+            NSLog(@"Could not save file");
+        }
     }
 }
 
