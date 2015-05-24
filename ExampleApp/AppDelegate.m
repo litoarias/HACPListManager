@@ -21,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [PlistManager createFullFilePath:@"data.plist"];
+    [PlistManager createFullFilePath:kFileName];
     
     
     return YES;

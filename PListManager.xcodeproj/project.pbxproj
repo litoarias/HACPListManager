@@ -18,7 +18,7 @@
 		E314B5E51AF77D5500FA15B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E314B5DE1AF77D5500FA15B4 /* Images.xcassets */; };
 		E32FFC4F1AF77EF600460D59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E32FFC4D1AF77EF600460D59 /* main.m */; };
 		E32FFC581AF7823500460D59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32FFC561AF7823500460D59 /* Main.storyboard */; };
-		E32FFC591AF7823500460D59 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = E32FFC571AF7823500460D59 /* data.plist */; };
+		E32FFC591AF7823500460D59 /* users.plist in Resources */ = {isa = PBXBuildFile; fileRef = E32FFC571AF7823500460D59 /* users.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,7 @@
 		E32FFC4C1AF77EF600460D59 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "ExampleApp/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		E32FFC4D1AF77EF600460D59 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "ExampleApp/Supporting Files/main.m"; sourceTree = SOURCE_ROOT; };
 		E32FFC561AF7823500460D59 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ExampleApp/Main.storyboard; sourceTree = SOURCE_ROOT; };
-		E32FFC571AF7823500460D59 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = data.plist; path = ExampleApp/data.plist; sourceTree = SOURCE_ROOT; };
+		E32FFC571AF7823500460D59 /* users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = users.plist; path = ExampleApp/users.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +141,7 @@
 				E30E8EE41B0C87F100B103D3 /* AddViewController.m */,
 				E30E8EE61B0C881700B103D3 /* ListViewController.h */,
 				E30E8EE71B0C881700B103D3 /* ListViewController.m */,
-				E32FFC571AF7823500460D59 /* data.plist */,
+				E32FFC571AF7823500460D59 /* users.plist */,
 				E314B5B11AF77AB100FA15B4 /* Supporting Files */,
 			);
 			name = ExampleApp;
@@ -232,7 +232,7 @@
 				E314B5E51AF77D5500FA15B4 /* Images.xcassets in Resources */,
 				E30E8F051B0CD1D600B103D3 /* male.png in Resources */,
 				E30E8F041B0CD1D600B103D3 /* female.png in Resources */,
-				E32FFC591AF7823500460D59 /* data.plist in Resources */,
+				E32FFC591AF7823500460D59 /* users.plist in Resources */,
 				E32FFC581AF7823500460D59 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

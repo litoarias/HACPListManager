@@ -85,21 +85,13 @@
         selectedImage)
     {
         // Add object image
-        
         NSDictionary *object = @{@"name"    : self.fieldName.text,
                                  @"surname" : self.filedSurname.text,
                                  @"age"     : self.fieldAge.text,
                                  kImage     : selectedImage};
         
-        // Add object without image
         
-//                NSDictionary *object = @{@"name"    : self.fieldName.text,
-//                                         @"surname" : self.filedSurname.text,
-//                                         @"age"     : self.fieldAge.text};
-        
-        
-        
-        [PlistManager insertObjectWithData:object fileName:@"data.plist"];
+        [PlistManager insertObjectWithData:object fileName:kFileName];
         
     }
     else
