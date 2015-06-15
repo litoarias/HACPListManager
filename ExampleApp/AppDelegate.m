@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "PlistManager.h"
+#import "HACPlistManager.h"
 
 #define kFileName @"users.plist"
 
@@ -21,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [PlistManager createFullFilePath:kFileName];
+    [HACPlistManager createFullFilePath:kFileName];
     
     
     return YES;

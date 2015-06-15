@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Indra. All rights reserved.
 //
 
-#import "PlistManager.h"
+#import "HACPlistManager.h"
 
-@implementation PlistManager
+@implementation HACPlistManager
 
 
 + (BOOL) createFullFilePath:(NSString *)fileName
@@ -55,22 +55,20 @@
     }
     
     return NO;
-    
-    
-    
+        
 }
 
 + (void) insertObjectWithData:(NSDictionary *)data fileName:(NSString *) fileName {
     
     if(data[kImage]){
         // Get name unique for image
-        NSString *imageName = [PlistManager createImageName];
+        NSString *imageName = [HACPlistManager createImageName];
         // Create mutable dictionary for add keys
         NSMutableDictionary *newData = [data mutableCopy];
         // Add new key
         [newData setObject:imageName forKey:kNameImage];
         // Save image in file directory
-        [PlistManager saveImage:[data valueForKey:kImage] name:imageName];
+        [HACPlistManager saveImage:[data valueForKey:kImage] name:imageName];
         // Clean old object
         data = nil;
         // Delete key of UIImage
@@ -97,7 +95,7 @@
     }
     [misDatos writeToFile:writableDBPath atomically:YES];
  
-    [PlistManager logWithFileName:fileName];
+    [HACPlistManager logWithFileName:fileName];
     
 }
 
@@ -113,7 +111,7 @@
         
         if([[misDatos objectAtIndex:i] isEqualToDictionary:data]){
             if (data[kNameImage]) {
-                [PlistManager removeImage:[data valueForKey:kNameImage]];
+                [HACPlistManager removeImage:[data valueForKey:kNameImage]];
             }
             [misDatos removeObjectAtIndex:i];
         }
@@ -134,7 +132,7 @@
         // It has image
         if ([misDatos objectAtIndex:i][kNameImage]) {
             // Delete image
-            [PlistManager removeImage:[[misDatos objectAtIndex:i]valueForKey:kNameImage]];
+            [HACPlistManager removeImage:[[misDatos objectAtIndex:i]valueForKey:kNameImage]];
         }
     }
     
@@ -177,7 +175,7 @@
 
 +(NSArray *) searchObjectsWith:(NSString *)stringSearch keyDictionary:(NSString *)keyDictionary fileName:(NSString *) fileName{
     
-    NSArray *filteredArray = [[PlistManager getAllObjectsWithFileName:fileName] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"%K CONTAINS[cd] %@", keyDictionary, stringSearch]];
+    NSArray *filteredArray = [[HACPlistManager getAllObjectsWithFileName:fileName] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"%K CONTAINS[cd] %@", keyDictionary, stringSearch]];
     
     if(filteredArray.count > 0){
         return filteredArray;

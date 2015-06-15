@@ -7,12 +7,13 @@
 //
 
 #import "ListViewController.h"
-#import "PlistManager.h"
+#import "HACPlistManager.h"
+
+#import "RuntimeClass.h"
 
 #define kFileName @"users.plist"
 
 @interface ListViewController (){
-    
     NSArray *searchResults;
     NSArray *data;
 }
@@ -30,13 +31,27 @@
     // Do any additional setup after loading the view.
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    
+    
+//    NSLog(@"%@",[RuntimeClass buildClassFromDictionary:@[@"name",@"surname",@"age"] withName:@"Person"]);
+    
+    id Person = [RuntimeClass buildClassFromDictionary:@[@"name",@"surname",@"age"] withName:@"Person"];
+    
+    NSLog(@"1. %@",Person);
+    
+    [Person setValue:@"Lito" forKey:@"name"];
+    [Person setValue:@"Arias" forKey:@"surname"];
+    [Person setValue:@"31" forKey:@"age"];
+//    NSDictionary* Person1 = [RuntimeClass buildClassFromDictionary:@[@"Lito",@"Arias",@"31"] withName:@"Person"];
+    
+    NSLog(@"2.%@",Person);
 }
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
     
-    data = [PlistManager getAllObjectsWithFileName:kFileName];
+    data = [HACPlistManager getAllObjectsWithFileName:kFileName];
     
 }
 
@@ -80,7 +95,7 @@
     cell.detailTextLabel.text = [user valueForKey:@"surname"];
     
     if ([user valueForKey:kNameImage]) {
-        cell.imageView.image = [PlistManager loadImageWithName:[user valueForKey:kNameImage]];
+        cell.imageView.image = [HACPlistManager loadImageWithName:[user valueForKey:kNameImage]];
     }
     
     return cell;
@@ -92,8 +107,8 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [PlistManager deleteObjectWithData:[data objectAtIndex:indexPath.row] fileName:kFileName];
-        data = [PlistManager getAllObjectsWithFileName:kFileName];
+        [HACPlistManager deleteObjectWithData:[data objectAtIndex:indexPath.row] fileName:kFileName];
+        data = [HACPlistManager getAllObjectsWithFileName:kFileName];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
@@ -117,8 +132,8 @@
 }
 
 - (IBAction)deletaAll:(id)sender {
-    [PlistManager deleteAllObjectsWithFileName:kFileName];
-    data = [PlistManager getAllObjectsWithFileName:kFileName];
+    [HACPlistManager deleteAllObjectsWithFileName:kFileName];
+    data = [HACPlistManager getAllObjectsWithFileName:kFileName];
     [self.tableView reloadData];
 }
 

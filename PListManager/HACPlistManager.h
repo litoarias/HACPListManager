@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#define kImage @"keyForImageObject"
-#define kNameImage @"keyForNameImageObject"
+#define kImage      @"keyForImageObject"
+#define kNameImage  @"keyForNameImageObject"
 
-@interface PlistManager : NSObject
+@interface HACPlistManager : NSObject
 
 + (BOOL) createFullFilePath:(NSString *)fileName;
 

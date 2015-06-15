@@ -8,7 +8,7 @@
 //
 
 #import "AddViewController.h"
-#import "PlistManager.h"
+#import "HACPlistManager.h"
 
 #define kFileName @"users.plist"
 
@@ -91,7 +91,7 @@
                                  kImage     : selectedImage};
         
         
-        [PlistManager insertObjectWithData:object fileName:kFileName];
+        [HACPlistManager insertObjectWithData:object fileName:kFileName];
         
     }
     else

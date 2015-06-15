@@ -9,16 +9,14 @@
 /* Begin PBXBuildFile section */
 		E30E8EE51B0C87F100B103D3 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30E8EE41B0C87F100B103D3 /* AddViewController.m */; };
 		E30E8EE81B0C881700B103D3 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30E8EE71B0C881700B103D3 /* ListViewController.m */; };
-		E30E8F031B0CD1D600B103D3 /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = E30E8F001B0CD1D600B103D3 /* boy.png */; };
-		E30E8F041B0CD1D600B103D3 /* female.png in Resources */ = {isa = PBXBuildFile; fileRef = E30E8F011B0CD1D600B103D3 /* female.png */; };
-		E30E8F051B0CD1D600B103D3 /* male.png in Resources */ = {isa = PBXBuildFile; fileRef = E30E8F021B0CD1D600B103D3 /* male.png */; };
 		E314B5CE1AF77AB100FA15B4 /* PListManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E314B5CD1AF77AB100FA15B4 /* PListManagerTests.m */; };
-		E314B5D91AF77AC300FA15B4 /* PlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E314B5D81AF77AC300FA15B4 /* PlistManager.m */; };
+		E314B5D91AF77AC300FA15B4 /* HACPlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E314B5D81AF77AC300FA15B4 /* HACPlistManager.m */; };
 		E314B5E31AF77D5500FA15B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E314B5DC1AF77D5500FA15B4 /* AppDelegate.m */; };
 		E314B5E51AF77D5500FA15B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E314B5DE1AF77D5500FA15B4 /* Images.xcassets */; };
 		E32FFC4F1AF77EF600460D59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E32FFC4D1AF77EF600460D59 /* main.m */; };
 		E32FFC581AF7823500460D59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32FFC561AF7823500460D59 /* Main.storyboard */; };
 		E32FFC591AF7823500460D59 /* users.plist in Resources */ = {isa = PBXBuildFile; fileRef = E32FFC571AF7823500460D59 /* users.plist */; };
+		E3F9302D1B2CB1C000021CD3 /* RuntimeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F9302C1B2CB1C000021CD3 /* RuntimeClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,15 +34,12 @@
 		E30E8EE41B0C87F100B103D3 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddViewController.m; path = ExampleApp/AddViewController.m; sourceTree = SOURCE_ROOT; };
 		E30E8EE61B0C881700B103D3 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = ExampleApp/ListViewController.h; sourceTree = SOURCE_ROOT; };
 		E30E8EE71B0C881700B103D3 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ExampleApp/ListViewController.m; sourceTree = SOURCE_ROOT; };
-		E30E8F001B0CD1D600B103D3 /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boy.png; path = ExampleApp/boy.png; sourceTree = SOURCE_ROOT; };
-		E30E8F011B0CD1D600B103D3 /* female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = female.png; path = ExampleApp/female.png; sourceTree = SOURCE_ROOT; };
-		E30E8F021B0CD1D600B103D3 /* male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = male.png; path = ExampleApp/male.png; sourceTree = SOURCE_ROOT; };
 		E314B5AE1AF77AB100FA15B4 /* PListManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PListManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E314B5C71AF77AB100FA15B4 /* PListManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PListManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E314B5CC1AF77AB100FA15B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E314B5CD1AF77AB100FA15B4 /* PListManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PListManagerTests.m; sourceTree = "<group>"; };
-		E314B5D71AF77AC300FA15B4 /* PlistManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistManager.h; sourceTree = "<group>"; };
-		E314B5D81AF77AC300FA15B4 /* PlistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistManager.m; sourceTree = "<group>"; };
+		E314B5D71AF77AC300FA15B4 /* HACPlistManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACPlistManager.h; sourceTree = "<group>"; };
+		E314B5D81AF77AC300FA15B4 /* HACPlistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACPlistManager.m; sourceTree = "<group>"; };
 		E314B5DB1AF77D5500FA15B4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ExampleApp/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		E314B5DC1AF77D5500FA15B4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ExampleApp/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		E314B5DE1AF77D5500FA15B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ExampleApp/Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -52,6 +47,8 @@
 		E32FFC4D1AF77EF600460D59 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "ExampleApp/Supporting Files/main.m"; sourceTree = SOURCE_ROOT; };
 		E32FFC561AF7823500460D59 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ExampleApp/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		E32FFC571AF7823500460D59 /* users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = users.plist; path = ExampleApp/users.plist; sourceTree = SOURCE_ROOT; };
+		E3F9302B1B2CB1C000021CD3 /* RuntimeClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeClass.h; sourceTree = "<group>"; };
+		E3F9302C1B2CB1C000021CD3 /* RuntimeClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +91,10 @@
 		E314B5B01AF77AB100FA15B4 /* PListManager */ = {
 			isa = PBXGroup;
 			children = (
-				E314B5D71AF77AC300FA15B4 /* PlistManager.h */,
-				E314B5D81AF77AC300FA15B4 /* PlistManager.m */,
+				E314B5D71AF77AC300FA15B4 /* HACPlistManager.h */,
+				E314B5D81AF77AC300FA15B4 /* HACPlistManager.m */,
+				E3F9302B1B2CB1C000021CD3 /* RuntimeClass.h */,
+				E3F9302C1B2CB1C000021CD3 /* RuntimeClass.m */,
 			);
 			path = PListManager;
 			sourceTree = "<group>";
@@ -130,9 +129,6 @@
 		E314B5DA1AF77C9500FA15B4 /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				E30E8F001B0CD1D600B103D3 /* boy.png */,
-				E30E8F011B0CD1D600B103D3 /* female.png */,
-				E30E8F021B0CD1D600B103D3 /* male.png */,
 				E314B5DB1AF77D5500FA15B4 /* AppDelegate.h */,
 				E314B5DC1AF77D5500FA15B4 /* AppDelegate.m */,
 				E314B5DE1AF77D5500FA15B4 /* Images.xcassets */,
@@ -228,10 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E30E8F031B0CD1D600B103D3 /* boy.png in Resources */,
 				E314B5E51AF77D5500FA15B4 /* Images.xcassets in Resources */,
-				E30E8F051B0CD1D600B103D3 /* male.png in Resources */,
-				E30E8F041B0CD1D600B103D3 /* female.png in Resources */,
 				E32FFC591AF7823500460D59 /* users.plist in Resources */,
 				E32FFC581AF7823500460D59 /* Main.storyboard in Resources */,
 			);
@@ -252,10 +245,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E30E8EE81B0C881700B103D3 /* ListViewController.m in Sources */,
-				E314B5D91AF77AC300FA15B4 /* PlistManager.m in Sources */,
+				E314B5D91AF77AC300FA15B4 /* HACPlistManager.m in Sources */,
 				E314B5E31AF77D5500FA15B4 /* AppDelegate.m in Sources */,
 				E30E8EE51B0C87F100B103D3 /* AddViewController.m in Sources */,
 				E32FFC4F1AF77EF600460D59 /* main.m in Sources */,
+				E3F9302D1B2CB1C000021CD3 /* RuntimeClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
